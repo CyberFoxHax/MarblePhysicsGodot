@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/OrbitCamera.cs" type="Script" id=1]
+[ext_resource path="res://Ball.tscn" type="PackedScene" id=2]
+
+[node name="Node" type="Spatial"]
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
+Camera = NodePath("../Camera")
+useGodotContacts = true
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.25906 )
+script = ExtResource( 1 )
+Target = NodePath("../Player")

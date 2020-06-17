@@ -1,0 +1,140 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Ball.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/OrbitCamera.cs" type="Script" id=2]
+[ext_resource path="res://checker.png" type="Texture" id=3]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_texture = ExtResource( 3 )
+emission_enabled = true
+emission = Color( 0, 0, 0, 1 )
+emission_energy = 1.0
+emission_operator = 0
+emission_on_uv2 = false
+uv1_scale = Vector3( 200, 200, 200 )
+
+[sub_resource type="CubeMesh" id=3]
+material = SubResource( 2 )
+
+[sub_resource type="ProceduralSky" id=4]
+
+[sub_resource type="Environment" id=5]
+background_mode = 2
+background_sky = SubResource( 4 )
+ambient_light_color = Color( 0.231373, 0.231373, 0.231373, 1 )
+tonemap_mode = 2
+ss_reflections_enabled = true
+ssao_enabled = true
+dof_blur_far_distance = 44.26
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2.65551, 0 )
+Camera = NodePath("../Camera")
+useGodotContacts = true
+
+[node name="Camera" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.58916, 8.24708 )
+script = ExtResource( 2 )
+distance = 3.0
+cameraSpeed = 0.2
+Target = NodePath("../Player")
+
+[node name="Camera" type="Camera" parent="Camera"]
+
+[node name="Collisions" type="Node" parent="."]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.768194, -0.424677, 0.479091, -0.63415, -0.401958, 0.660518, -0.0879328, -0.811221, -0.57809, 1.85954, 9.04362, -3.73314 )
+light_specular = 0.51
+shadow_enabled = true
+
+[node name="Level" type="Node" parent="."]
+
+[node name="StaticBody" type="StaticBody" parent="Level"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.04483, 0.900952, 0.32488 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Level/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Level/StaticBody"]
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="StaticBody8" type="StaticBody" parent="Level"]
+transform = Transform( 2.3825, 0, 0, 0, 0.220147, 0, 0, 0, 2.3825, 1.36383, 4.65238, -7.7341 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Level/StaticBody8"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Level/StaticBody8"]
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="StaticBody5" type="StaticBody" parent="Level"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.04483, 0.900952, 2.69504 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Level/StaticBody5"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Level/StaticBody5"]
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="StaticBody7" type="StaticBody" parent="Level"]
+transform = Transform( 0.68335, 0.730091, 0, -0.730091, 0.68335, 0, 0, 0, 1, 5.96616, 0.145104, 2.69504 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Level/StaticBody7"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Level/StaticBody7"]
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="StaticBody6" type="StaticBody" parent="Level"]
+transform = Transform( 2.53239, 0, 0, 0, 2.53239, 0, 0, 0, 1, 7.04483, 2.6404, 4.73117 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Level/StaticBody6"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Level/StaticBody6"]
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="StaticBody3" type="StaticBody" parent="Level"]
+transform = Transform( 1, 0, 0, 0, 1.75443, 0, 0, 0, 1, 7.04483, 1.7347, -2.0561 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Level/StaticBody3"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Level/StaticBody3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0140529, 0.0390177, 0.060905 )
+material_override = SubResource( 2 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="StaticBody4" type="StaticBody" parent="Level"]
+transform = Transform( 1, 0, 0, 0, 2.44356, 0, 0, 0, 2.10875, 5.02688, 2.35071, -3.10745 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Level/StaticBody4"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Level/StaticBody4"]
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="StaticBody2" type="StaticBody" parent="Level"]
+transform = Transform( 100, 0, 0, 0, 1, 0, 0, 0, 100, 0, -1, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Level/StaticBody2"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Level/StaticBody2"]
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 5 )

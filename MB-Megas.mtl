@@ -1,0 +1,139 @@
+newmtl null
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
+
+newmtl origin
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
+
+newmtl trigger
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
+
+newmtl forcefield
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
+
+newmtl tile_beginner
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
+
+newmtl tile_beginner_blue
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
+
+newmtl tile_underside
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
+
+newmtl plate_1_small
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
+
+newmtl edge_white
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
+
+newmtl tile_beginner_red
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
+
+newmtl tile_advanced_blue
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
+
+newmtl friction_low
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
+
+newmtl friction_high
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
+
+newmtl tile_intermediate_green
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
+
+newmtl tile_advanced_green
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
+
+newmtl tile_intermediate
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
+
+newmtl tile_advanced
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
+
+newmtl plate_1
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
+
+newmtl tile_bouncy2
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
+
+newmtl tile_intermediate_red
+    Ka 1 1 1
+    Kd 1 1 1
+    Ks 1 1 1
+    d 1
+    illum 4
